@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Learning Couchapp, evently and mustache!</title>
+	  <link rel="stylesheet" href="style/main.css" type="text/css">
+	</head>
+	<body>
+	  <h1>Hello, World!</h1>
+	  <div id="items"><p></p></div>
+	  <div id="sidebar"><p></p></div>
+	</body>
+  	<script src="vendor/couchapp/loader.js"></script>
+	<script type="text/javascript" charset="utf-8">
+	  $.couch.app(function(app) {
+	    $("#items").evently("choices", app);
+	    $("#sidebar").evently("items", app);
+	    $.evently.connect("#items", "#sidebar", ["add"]);
+	  });
+	</script>
+	
+</html>
