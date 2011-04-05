@@ -11,11 +11,61 @@
 	</body>
   	<script src="vendor/couchapp/loader.js"></script>
 	<script type="text/javascript" charset="utf-8">
-	  $.couch.app(function(app) {
+
+	
+	function getUrlVars() {
+	    var vars = [], hash;
+	    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+	    for(var i = 0; i < hashes.length; i++)  {
+	        hash = hashes[i].split('=');
+	        vars.push(hash[0]);
+	        vars[hash[0]] = hash[1];
+	    }
+	    return vars;
+	}
+
+	if (getUrlVars().url){
+	  	var db = $.couch.db('urls');
+	  	db.saveDoc({"type":"url", "url":getUrlVars().url});
+	}
+
+	$.couch.app(function(app) {
 	    $("#items").evently("choices", app);
 	    $("#sidebar").evently("items", app);
 	    $.evently.connect("#items", "#sidebar", ["add"]);
 	  });
+	
+
 	</script>
+<script>	
+/*bookmarklet
+if (typeof jQuery == 'undefined') {
+	var jQ = document.createElement('script');
+	jQ.type = 'text/javascript';
+	jQ.onload=runthis;
+	jQ.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js';
+	document.body.appendChild(jQ);
+} else {
+	runthis();
+}
+
+function runthis() {
+	function getUrlVars() {
+	    var vars = [], hash;
+	    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+	    for(var i = 0; i < hashes.length; i++)  {
+	        hash = hashes[i].split('=');
+	        vars.push(hash[0]);
+	        vars[hash[0]] = hash[1];
+	    }
+	    return vars;
+	}
+
+	var url = getUrlVars()[0];
+	var baseUrl = 'https://balanceit:contact@balanceit.cloudant.com/urls/_design/saveurl/hello.html?url=' + url;
+	$("body").append("<iframe style='display:none;' src='"+baseUrl+"'>Enable iFrames.</iframe>");
+}
+	*/
+</script>
 	
 </html>
