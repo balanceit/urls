@@ -8,7 +8,11 @@ add a new url
 	</li>
 </ul>
 <ul>
-{{#examples}}
-  <li>{{value}}</li>
-{{/examples}}
+{{#examples}}{{#value}}
+<li>
+	{{url}}
+	<a href="#" class="delete" rev="{{rev}}" id="{{id}}">X</a>
+
+</li>
+{{/value}}{{/examples}}
 </ul>
