@@ -1,4 +1,6 @@
 function(data) {
-	$.log(data.rows);
+	$.log('reloading the rows');
+
+	$(this).trigger('notification', 'Finished loading');
 	return {examples: data.rows};
 }

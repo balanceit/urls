@@ -7,32 +7,16 @@
 	<body>
 	  <h1>Hello, World!</h1>
 	  <div id="items"><p></p></div>
-	  <div id="sidebar"><p></p></div>
+	  <div id="sidebar"><p>Loading...</p></div>
 	</body>
   	<script src="vendor/couchapp/loader.js"></script>
 	<script type="text/javascript" charset="utf-8">
 
-	
-	function getUrlVars() {
-	    var vars = [], hash;
-	    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-	    for(var i = 0; i < hashes.length; i++)  {
-	        hash = hashes[i].split('=');
-	        vars.push(hash[0]);
-	        vars[hash[0]] = hash[1];
-	    }
-	    return vars;
-	}
-
-	if (getUrlVars().url){
-	  	var db = $.couch.db('urls');
-	  	db.saveDoc({"type":"url", "url":getUrlVars().url});
-	}
 
 	$.couch.app(function(app) {
 	    $("#items").evently("choices", app);
 	    $("#sidebar").evently("items", app);
-	    $.evently.connect("#items", "#sidebar", ["add"]);
+	    $.evently.connect("#items", "#sidebar", ["notification"]);
 	  });
 	
 
