@@ -49,6 +49,10 @@ function runthis() {
 	var baseUrl = 'http://balanceit.cloudant.com/urls/_design/saveurl/_rewrite/?url=' + url;
 	$("body").append("<iframe style='display:none;' src='"+baseUrl+"'>Enable iFrames.</iframe>");
 }
+
+//the minified version
+if(typeof jQuery=='undefined'){var jQ=document.createElement('script');jQ.type='text/javascript';jQ.onload=runthis;jQ.src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js';document.body.appendChild(jQ)}else{runthis()}function runthis(){function getUrlVars(){var a=[],hash;var b=window.location.href.slice(window.location.href.indexOf('?')+1).split('&');for(var i=0;i<b.length;i++){hash=b[i].split('=');a.push(hash[0]);a[hash[0]]=hash[1]}return a}var c=getUrlVars()[0];var d='http://balanceit.cloudant.com/urls/_design/saveurl/_rewrite/?url='+c;$("body").append("<iframe style='display:none;' src='"+d+"'>Enable iFrames.</iframe>")}
+
 	*/
 </script>
 	
