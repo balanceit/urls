@@ -1,7 +1,0 @@
-{
-   "env": { 
-     "default": {
-       "db": "https://balanceit:contact@balanceit.cloudant.com/urls"
-     }
-   }
-}
