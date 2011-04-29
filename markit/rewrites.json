@@ -1,0 +1,10 @@
+[ 
+	{
+		"from": "",
+		"to": "delegate/index.html"
+	},
+	{
+		"from": "*",
+		"to": "*"
+	}
+]
