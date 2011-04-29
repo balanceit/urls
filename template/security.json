@@ -1,0 +1,5 @@
+{
+  "cloudant": {
+    "balanceit": ["_reader","_writer","_admin"]
+  }
+}

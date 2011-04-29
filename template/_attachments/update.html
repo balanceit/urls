@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<script src="vendor/couchapp/loader.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		var currentTime = new Date();
+	  	var db = $.couch.db('urls');
+
+
+	  	db.view('saveurl/urls', { success: function(doc) {
+		    for(var i = 0; i < doc.rows.length; i++)  {
+			    var newDoc = null;
+			    newDoc = doc.rows[i];
+			  	db.openDoc(newDoc.id, { success: function(doc) {
+			  		doc.user = 'balanceit';
+				  	db.saveDoc(doc);
+					}});
+
+			    }
+
+		  	}});
+
+
+			
+	  	
+		//db.saveDoc({"type":"url", "url":getUrlVars().url}, "createdOn": currentTime.parse, "readOn":null, "user":null);
+		
+	</script>
+	</head>
+</html>

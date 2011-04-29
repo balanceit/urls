@@ -1,0 +1,90 @@
+<style>
+body {
+  background: white;
+
+  overflow-x:hidden;
+  min-width:533px;
+  xheight:100%;
+}
+
+div:first-child {
+  margin-top: 10px;
+}
+div.close {
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+div {
+  cursor: pointer;
+  padding: 8px 8px 8px 12px;
+  font-family: consolas,monospace;
+  font-size: 0.9em;
+  margin-top: 6px;
+  xbackground: #cccccc;
+  -webkit-border-radius: 5px;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#EAEAEA), to(#ABABAB));
+  -webkit-box-shadow: 1px 1px 2px #111;
+  text-shadow: rgba(255, 255, 255, 0.597656) 1px 1px 0px;
+}
+div:hover {
+  background: #aaaaaa;
+}
+
+</style>
+
+<script>
+var req = new XMLHttpRequest();
+req.open(
+    "GET",
+    "https://indowerederdlichandarepu:Xo1oY7l502mXEef7fa8Bo5nE@balanceit.cloudant.com/urls/_design/saveurl/_view/urls",
+    true);
+req.onload = showPhotos;
+req.send(null);
+
+function showPhotos() {
+  var links = JSON.parse(req.responseText).rows;
+  var linksLength = links.length;
+  for (var i = 0; i < links.length; i++) {
+    var div = document.createElement("div");
+    div.innerText = links[i].value.url;
+    div.id = links[i].id;
+    div.onclick = function(e){
+		      //chrome.tabs.create({"url":this.innerText, "selected":false});
+		      document.body.removeChild(this);
+
+		      var deleteRequest = new XMLHttpRequest();
+		      deleteRequest.open(
+		          "GET",
+		          "https://indowerederdlichandarepu:Xo1oY7l502mXEef7fa8Bo5nE@balanceit.cloudant.com/urls/_design/saveurl/_rewrite?action=delete&id=" + this.id ,
+		          true);
+
+		      deleteRequest.onreadystatechange=function() {
+			      console.log('in onreadystatechange state:' + deleteRequest.readyState + ' status:' + deleteRequest.status);
+			      
+			      
+		    	  if (deleteRequest.readyState==4 && deleteRequest.status==200){
+		    	  }
+			  }
+		      
+		      deleteRequest.onload = function(){console.log('sent request');console.log(deleteRequest.responseText);};
+		      deleteRequest.send();
+		      		      
+		      if (--linksLength == 0){
+			    window.close();
+			  }
+	};
+    document.body.appendChild(div);
+  }
+  var close = document.createElement("div");
+  close.innerText = "Close";
+  close.onclick = function(){window.close();};
+  close.className = 'close';
+  document.body.appendChild(close);
+
+}
+
+
+</script>

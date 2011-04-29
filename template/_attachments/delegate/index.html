@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<script src="/vendor/couchapp/loader.js"></script>
+	<script type="text/javascript" charset="utf-8">
+	var currentTime = new Date();
+
+	function getUrlVars() {
+	    var vars = [], hash;
+	    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+	    for(var i = 0; i < hashes.length; i++)  {
+	        hash = hashes[i].split('=');
+	        vars.push(hash[0]);
+	        vars[hash[0]] = hash[1];
+	    }
+	    return vars;
+	}
+
+	if (getUrlVars().url){
+	  	var db = $.couch.db('urls');
+	  	db.saveDoc({"type":"url", "url":getUrlVars().url}, "createdOn": currentTime.parse, "readOn":null, "user":authuser);
+	}
+
+	if (getUrlVars().id && getUrlVars().action == 'delete'){
+	  	var db = $.couch.db('urls');
+	  	var id = getUrlVars().id;
+	  		
+	  	db.openDoc(id, { success: function(doc) {
+			$.log('deleting' + doc.url);
+				db.removeDoc(doc, { success: function() {  
+				$.log('deleted' + id); 
+				$.couch.app(function(app) {
+				    $("#items").evently("list", app);
+				});      
+			}})  
+		}});  
+	}
+  </script>
+  </head>
+    <title>My New CouchApp</title>
+    <body>
+    some other stuff
+    
+    </body>
+</html>

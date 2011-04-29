@@ -1,0 +1,97 @@
+2011-04-26 19:42:34 [DEBUG] Resource uri: https://balanceit:contact@balanceit.cloudant.com/urls
+2011-04-26 19:42:34 [DEBUG] Request: HEAD None
+2011-04-26 19:42:34 [DEBUG] Headers: {'Accept': 'application/json', 'User-Agent': 'couchapp/0.7.5'}
+2011-04-26 19:42:34 [DEBUG] Params: {}
+2011-04-26 19:42:34 [DEBUG] Start to perform request: HEAD balanceit.cloudant.com /urls
+2011-04-26 19:42:34 [DEBUG] create new connection
+2011-04-26 19:42:35 [DEBUG] Send headers: [u'HEAD /urls HTTP/1.1\r\n', 'Host: balanceit.cloudant.com\r\n', 'User-Agent: restkit/3.0.4\r\n', 'Accept-Encoding: identity\r\n', 'Accept: application/json\r\n', 'Authorization: Basic YmFsYW5jZWl0OmNvbnRhY3Q=\r\n']
+2011-04-26 19:42:35 [DEBUG] Start to parse response
+2011-04-26 19:42:35 [DEBUG] Got response: 200 OK
+2011-04-26 19:42:35 [DEBUG] headers: [MultiDict([('Server', 'CouchDB/1.0.0 (Erlang OTP/R13B04)'), ('Date', 'Tue, 26 Apr 2011 07:42:35 GMT'), ('Content-Type', 'application/json'), ('Content-Length', '331'), ('Cache-Control', 'must-revalidate')])]
+2011-04-26 19:42:35 [DEBUG] return response class
+2011-04-26 19:42:35 [DEBUG] release connection
+2011-04-26 19:42:35 [DEBUG] push evently/list/_init/data.js
+2011-04-26 19:42:35 [DEBUG] push evently/list/_init/mustache.html
+2011-04-26 19:42:35 [DEBUG] push evently/list/_init/query.json
+2011-04-26 19:42:35 [DEBUG] push evently/list/_init/selectors/a.delete/click.js
+2011-04-26 19:42:35 [DEBUG] push evently/list/_init/selectors/button#add/click.js
+2011-04-26 19:42:35 [DEBUG] push evently/notifications/notification/data.js
+2011-04-26 19:42:35 [DEBUG] push evently/notifications/notification/mustache.html
+2011-04-26 19:42:35 [DEBUG] push language
+2011-04-26 19:42:35 [DEBUG] push README
+2011-04-26 19:42:35 [DEBUG] push README.md
+2011-04-26 19:42:35 [WARNING] README is already in properties. Can't add (README.md)
+2011-04-26 19:42:35 [DEBUG] push rewrites.json
+2011-04-26 19:42:35 [DEBUG] push temp
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/account/_init.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/account/adminParty/mustache.html
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/account/doLogin.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/account/doLogout.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/account/doSignup.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/account/loggedIn/after.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/account/loggedIn/data.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/account/loggedIn/mustache.html
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/account/loggedIn/selectors.json
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/account/loggedOut/mustache.html
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/account/loggedOut/selectors.json
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/account/loginForm/after.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/account/loginForm/mustache.html
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/account/loginForm/selectors/a[href=#signup].json
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/account/loginForm/selectors/form/submit.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/account/signupForm/after.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/account/signupForm/mustache.html
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/account/signupForm/selectors/a[href=#login].json
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/account/signupForm/selectors/form/submit.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/profile/loggedIn.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/profile/loggedOut/after.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/profile/loggedOut/mustache.html
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/profile/noProfile/data.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/profile/noProfile/mustache.html
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/profile/noProfile/selectors/form/submit.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/profile/profileReady/after.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/profile/profileReady/data.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/profile/profileReady/mustache.html
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/evently/README.md
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/lib/atom.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/lib/cache.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/lib/code.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/lib/docform.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/lib/linkup.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/lib/list.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/lib/markdown.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/lib/md5.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/lib/mustache.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/lib/path.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/lib/redirect.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/lib/utils.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/lib/validate.js
+2011-04-26 19:42:35 [DEBUG] push vendor/couchapp/metadata.json
+2011-04-26 19:42:35 [DEBUG] push views/recent-items/map.js
+2011-04-26 19:42:35 [DEBUG] push views/urls/map.js
+2011-04-26 19:42:35 [DEBUG] Resource uri: https://balanceit:contact@balanceit.cloudant.com/urls
+2011-04-26 19:42:35 [DEBUG] Request: GET _design/saveurl
+2011-04-26 19:42:35 [DEBUG] Headers: {'Accept': 'application/json', 'User-Agent': 'couchapp/0.7.5'}
+2011-04-26 19:42:35 [DEBUG] Params: {}
+2011-04-26 19:42:35 [DEBUG] Start to perform request: GET balanceit.cloudant.com /urls/_design/saveurl
+2011-04-26 19:42:35 [DEBUG] Send headers: [u'GET /urls/_design/saveurl HTTP/1.1\r\n', 'Host: balanceit.cloudant.com\r\n', 'User-Agent: restkit/3.0.4\r\n', 'Accept-Encoding: identity\r\n', 'Accept: application/json\r\n', 'Authorization: Basic YmFsYW5jZWl0OmNvbnRhY3Q=\r\n']
+2011-04-26 19:42:35 [DEBUG] Start to parse response
+2011-04-26 19:42:36 [DEBUG] Got response: 200 OK
+2011-04-26 19:42:36 [DEBUG] headers: [MultiDict([('Server', 'CouchDB/1.0.0 (Erlang OTP/R13B04)'), ('Etag', '"232-e680832e652c44500d489c5c8fa32ef6"'), ('Date', 'Tue, 26 Apr 2011 07:42:35 GMT'), ('Content-Type', 'application/json'), ('Content-Length', '86839'), ('Cache-Control', 'must-revalidate')])]
+2011-04-26 19:42:36 [DEBUG] return response class
+2011-04-26 19:42:36 [DEBUG] release connection
+2011-04-26 19:42:36 [DEBUG] process function: map
+2011-04-26 19:42:36 [DEBUG] process function: map
+2011-04-26 19:42:36 [DEBUG] Resource uri: https://balanceit:contact@balanceit.cloudant.com/urls
+2011-04-26 19:42:36 [DEBUG] Request: PUT _design/saveurl
+2011-04-26 19:42:36 [DEBUG] Headers: {'Content-Type': 'application/json', 'Accept': 'application/json', 'User-Agent': 'couchapp/0.7.5'}
+2011-04-26 19:42:36 [DEBUG] Params: {}
+2011-04-26 19:42:36 [DEBUG] Start to perform request: PUT balanceit.cloudant.com /urls/_design/saveurl
+2011-04-26 19:42:36 [DEBUG] Send headers: [u'PUT /urls/_design/saveurl HTTP/1.1\r\n', 'Host: balanceit.cloudant.com\r\n', 'User-Agent: restkit/3.0.4\r\n', 'Accept-Encoding: identity\r\n', 'Accept: application/json\r\n', 'Content-Length: 89286\r\n', 'Content-Type: application/json\r\n', 'Authorization: Basic YmFsYW5jZWl0OmNvbnRhY3Q=\r\n']
+2011-04-26 19:42:36 [DEBUG] send body (chunked: False) <type 'str'>
+2011-04-26 19:42:36 [DEBUG] Start to parse response
+2011-04-26 19:42:38 [DEBUG] Got response: 201 Created
+2011-04-26 19:42:38 [DEBUG] headers: [MultiDict([('Server', 'CouchDB/1.0.0 (Erlang OTP/R13B04)'), ('Location', 'http://balanceit.cloudant.com/urls/_design/saveurl'), ('Etag', '"233-c5a9ee42811b956363bfe960a27c896b"'), ('Date', 'Tue, 26 Apr 2011 07:42:37 GMT'), ('Content-Type', 'application/json'), ('Content-Length', '80'), ('Cache-Control', 'must-revalidate')])]
+2011-04-26 19:42:38 [DEBUG] return response class
+2011-04-26 19:42:38 [DEBUG] release connection
+2011-04-26 19:42:38 [INFO] Visit your CouchApp here:
+https://balanceit.cloudant.com/urls/_design/saveurl/index.html
