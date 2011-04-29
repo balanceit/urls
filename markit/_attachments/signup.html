@@ -1,0 +1,26 @@
+
+<html>
+	<head>
+	  	<title>Sign up for MarkIT!</title>
+	  	<link rel="stylesheet" href="style/main.css" type="text/css">
+		<script src="vendor/couchapp/loader.js"></script>
+		<script type="text/javascript" charset="utf-8">
+
+		$.couch.app(function(app) {
+		    $("#signup").evently("signup", app);
+		    $("#sidebar").evently("notifications", app);
+			$("#footer").evently("notifications", app);
+		    $.evently.connect("#signup", "#footer", ["bookmarklet"]);
+		   	$.evently.connect("#signup", "#sidebar", ["notification"]);
+		  });
+
+		</script>
+	</head>
+	<body>
+
+<div id="signup"><p></p></div>
+<div id="sidebar"><p></p></div>
+<div id="footer"><p></p></div>
+</body>
+
+</html>
