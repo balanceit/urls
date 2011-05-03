@@ -45,8 +45,9 @@ width: 1200px;
  -moz-border-radius: 20px 20px 0px 0px;  
  -webkit-border-radius: 20px 20px 0px 0px;  		
 background-image: -webkit-linear-gradient(top, #057163,  #07A28D);
-background-image: -moz-linear-gradient(top, #057163, #07A28D);
+background-image: -moz-linear-gradient(top, #09A509, #65D265);
 background-image: -webkit-gradient(linear, left top, left bottom, from(#057163), to(#07A28D));
+height: 150px;
 }
 
 img {
@@ -183,8 +184,6 @@ LAYOUT
  width: 960px;
  text-align: center;
  margin: 0 auto;
- padding-top: 20px;
- padding-bottom: 40px;
 }
 
 #columns {

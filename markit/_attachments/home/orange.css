@@ -47,6 +47,7 @@ width: 1200px;
 background-image: -webkit-linear-gradient(top, #FF6F00,  #FF6F00);
 background-image: -moz-linear-gradient(top, #FF6F00, #FF6F00);
 background-image: -webkit-gradient(linear, left top, left bottom, from(#FF6F00), to(#FF6F00));
+height: 150px;
 }
 
 img {
@@ -183,8 +184,6 @@ LAYOUT
  width: 960px;
  text-align: center;
  margin: 0 auto;
- padding-top: 20px;
- padding-bottom: 40px;
 }
 
 #columns {
