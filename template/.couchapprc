@@ -1,7 +1,7 @@
 {
    "env": { 
      "default": {
-       "db": "https://balanceit:contact@balanceit.cloudant.com/urls"
+       "db": "http://balanceit:contact@balanceit.iriscouch.com/urls"
      }
    }
 }

@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<meta charset="utf-8" /> 
+	<title>login</title>
+	
+    <script src="json2.js"></script> 
+    <script src="sha1.js"></script> 
+    <script src="jquery.js"></script> 
+    <script src="jquery.couch.js"></script> 
+    <script src="jquery.dialog.js"></script> 
+    <script src="login.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			//$.futon.session.setupSidebar();
+			//console.log($.futon.session.login);
+			//$("#show").click();
+			//$("#show").click(function() {
+			//	$("#auth").show('slow');
+			//});
+			
+			
+			$("#userCtx .show").click(function() {
+				var baseUrl = 'http://balanceit.iriscouch.com/bob/_design/bob/_view/urls';
+				$("body").append("<iframe style='width:100%;height:100%' src='"+baseUrl+"'></iframe>");
+				
+				$("#results").show('slow');
+			});
+		});
+		
+		
+	</script>
+
+</head> 
+<body onload=""> 
+	<span id="userCtx">
+		<span class="loggedout">
+			<a href="#" class="signup">Signup</a> or <a href="#" class="login">Login</a>
+		</span>
+		<span class="loggedin">
+			Welcome <a class="username">?</a>!
+			<br/>
+			<a href="#" class="logout">Logout</a>
+		</span>
+		<span class="loggedinadmin">
+			Welcome <a class="username">?</a>!
+			<br/>
+			<a href="#" class="createadmin">Setup more admins</a> or
+			<a href="#" class="logout">Logout</a>
+		</span>
+		<span class="adminparty">
+			Welcome to Admin Party!
+			<br/>
+			Everyone is admin. <a href="#" class="createadmin">Fix this</a>
+		</span>
+		<br/>
+		<a href="#" class="show">Show</a>
+	</span>
+	
+	<div id="results" style="display:none;border:1px solid black">
+	</div>
+</body> 
+</html>
