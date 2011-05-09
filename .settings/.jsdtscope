@@ -18,4 +18,5 @@
 	<classpathentry kind="src" path="vendor/couchapp/lib"/>
 	<classpathentry kind="src" path="views/recent-items"/>
 	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
 </classpath>
